@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+    <h1 class="heading text-center">
+        {{ .Type | humanize }}
+    </h1>
+    <div class="portfolio">
+        {{ range .Pages }}
+        <div class="portfolio-item">
+            <h2 class="heading"><a class="text-body">
+                    {{ if .Draft }}DRAFT:
+                    {{end}}{{ .Title | markdownify }}
+                </a>
+            </h2>
+            <div class="video-wrapper">
+                {{ .Content }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+

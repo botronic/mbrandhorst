@@ -1,0 +1,68 @@
+header {
+  margin: 10vh auto 2vh;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 96px;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  h3,
+  h4 {
+    padding: 0;
+    margin: 0;
+    color: black;
+  }
+
+  h4 {
+    letter-spacing: 0.45em;
+    margin: auto;
+  }
+}
+
+.active {
+  text-decoration-line: underline;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+#navbar-expand {
+  height: 100%;
+}
+
+.navbar-button {
+  display: none;
+}
+
+// fix fancybox styling messing with footer
+.fancybox-active {
+  height: 100% !important;
+}

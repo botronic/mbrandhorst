@@ -1,0 +1,9 @@
+<span class="blog-post-meta">
+    {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
+    <i class="fa fa-calendar-o"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
+    {{ if .Site.Params.readingTime }}
+        &nbsp;|&nbsp;
+        <i class="fa fa-clock-o"></i>{{ i18n "readingTime"}} {{ .ReadingTime }} {{ i18n "readTime" }} ({{ .WordCount }}
+        {{ i18n "words" }})
+    {{ end }}
+</span>

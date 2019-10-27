@@ -1,0 +1,97 @@
+@import "variables";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: $primary-color;
+  font-family: $text-font-family;
+
+  font-size: 100%;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+.heading,
+.subheading {
+  margin-bottom: 0;
+}
+
+.subheading {
+  margin-top: 0;
+}
+
+.content {
+  flex: 1 1 auto;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+
+.four-oh-four {
+  margin-top: 15vh;
+  color: $accent-color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.portfolio,
+.blog-posts,
+.about,
+.comments {
+  display: grid;
+}
+
+.blog-post,
+.portfolio-item {
+  a {
+    text-decoration: none;
+  }
+}
+
+.video-wrapper {
+  background: black;
+}
+
+.comments {
+  text-align: center;
+}
+
+@import "header";
+@import "footer";
+@import "about";
+@import "pager";
+@import "mobile";

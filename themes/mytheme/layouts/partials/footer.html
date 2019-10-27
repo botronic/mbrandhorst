@@ -1,0 +1,12 @@
+<footer class="footer">
+    <div class="social-menu">
+        {{ range .Site.Menus.social }}
+        <span class="social-menu-item">
+            <a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}</a>
+        </span>
+        {{ end }}
+        <span class="social-menu-item">
+            <a href="tel:{{.Site.Params.phone}}"><i class="fa fa-phone"></i></a>
+        </span>
+    </div>
+</footer>

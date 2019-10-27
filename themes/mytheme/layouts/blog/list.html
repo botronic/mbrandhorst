@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="container" role="main">
+  <h1 class="heading text-center">
+    {{ .Site.Params.blog_title }}
+  </h1>
+  <h3 class="subheading text-center">
+    {{ .Site.Params.blog_subtitle }}
+  </h3>
+  <div class="blog-posts">
+    {{range .Paginator.Pages}}
+    <div class="blog-post">
+      <a href="{{ .Permalink }}">
+        <h2 class="heading">{{ .Title }}</h2>
+
+        {{ if .Description }}
+        <h3 class="subheading">
+          {{ .Description }}
+        </h3>
+        {{ end }}
+      </a>
+      <p class="blog-post-meta">
+        {{ partial "blog-post-meta.html" . }}
+      </p>
+      <div class="blog-post-summary">
+        {{ if .Truncated }}
+        {{ .Summary }}
+        <div>
+        <a href="{{ .Permalink }}"> [{{ i18n "readMore" }}]</a>
+        </div>
+        {{ else }}
+        {{ .Content }}
+        {{ end }}
+      </div>
+    </div>
+    {{end}}
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <ul class="pager">
+      {{ if .Paginator.HasPrev }}
+      <li class="previous">
+        <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+      </li>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+      <li class="next">
+        <a href="{{ .Permalink   }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,53 @@
+# baseURL = "http://mbrandhorst.com/"
+languageCode = "en-us"
+title = "Max Brandhorst-Satzkorn"
+theme = "mytheme"
+
+googleAnalytics = "UA-49575020-1"
+disqusShortname = "yourdiscussshortname"
+
+[params]
+  subtitle = "Cinematographer"
+  blog_title = "Shit I Shot"
+	blog_subtitle = "A blog about cinematography"
+  email = "max.brandhorst@gmail.com"
+  phone = "+46706081728"
+	logo = "image/icon.jpg"
+	favicon = "image/favicon.ico"
+	dateFormat = "January 2, 2006"
+	readingTime = true
+  images = ["image/about.png", "image/gtr/2.jpg", "image/floating/2.jpg", "image/image/1.jpg", "image/togee/5.jpg", "image/vos/BTS_4.jpg"]
+  description = "A cinematographer portfolio website"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+
+  [[menu.main]]
+    identifier = "reel"
+    name = "Reel"
+
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+
+  [[menu.social]]
+    identifier = "instagram"
+    pre = "<i class='fa fa-instagram'></i>"
+    url = "https://www.instagram.com/maxbrandop/"
+  [[menu.social]]
+    identifier = "mail"
+    pre = "<i class='fa fa-envelope'></i>"
+    url = "mailto:max.brandhorst@gmail.com"
+
+[permalinks]
+  posts = "/blog/:title"
+

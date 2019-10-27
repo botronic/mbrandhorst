@@ -1,0 +1,22 @@
+footer {
+  width: 100%;
+  line-height: 60px;
+  background-color: $footer-color;
+}
+
+.social-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 15vw;
+  margin: 0 auto;
+}
+
+.social-menu-item {
+  width: 20px;
+  text-align: center;
+  margin: 0 auto;
+
+  a {
+    color: $accent-color;
+  }
+}

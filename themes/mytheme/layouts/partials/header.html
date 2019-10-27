@@ -1,0 +1,33 @@
+<header>
+    <nav class="header">
+        <a class="brand" href="{{ "/" | relURL}}">
+            <h3>{{.Site.Title}}</h3>
+            <h4>{{.Site.Params.Subtitle}}</h4>
+        </a>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <ul id='navbar-expand' style="height:0px;">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                        <li class='{{ if eq $currentPage.URL .URL  }} active{{end}}'>
+                            {{if eq .Name "Reel"}}
+                            <a data-fancybox href="https://vimeo.com/276883004">
+                                {{.Name}}
+                            </a>
+                            {{else}}
+                            <a data={{$currentPage}} class="nav-link" href="{{ .URL }}"
+                                title="{{ .Title }}">{{ .Name }}</a>
+                            {{end}}
+                        </li>
+                        {{ end }}
+                        <hr>
+                    </ul>
+                </li>
+                {{/*  <hr id="invis-line">  */}}
+                <li class='navbar-button' onclick="toggleNav()">Menu</li>
+                <hr>
+            </ul>
+        </div>
+    </nav>
+</header>
