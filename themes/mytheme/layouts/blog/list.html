@@ -1,11 +1,5 @@
 {{ define "main" }}
 <div class="container" role="main">
-  <h1 class="heading text-center">
-    {{ .Site.Params.blog_title }}
-  </h1>
-  <h3 class="subheading text-center">
-    {{ .Site.Params.blog_subtitle }}
-  </h3>
   <div class="blog-posts">
     {{range .Paginator.Pages}}
     <div class="blog-post">

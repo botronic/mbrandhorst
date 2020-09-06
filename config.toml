@@ -8,8 +8,6 @@ disqusShortname = "yourdiscussshortname"
 
 [params]
   subtitle = "Cinematographer"
-  blog_title = "Shit I Shot"
-	blog_subtitle = "A blog about cinematography"
   email = "max.brandhorst@gmail.com"
   phone = "+46706081728"
 	logo = "image/icon.jpg"
